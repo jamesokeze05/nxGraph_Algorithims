@@ -24,13 +24,14 @@ def is_dominationing_set(G, S):
     for v in S_complement:
         N = neighbors(G, V)
         if list(set(N) & set (S)) == []:
-            return Falsea
+            return False
     return True
 
-def is_matching(G):
-    for k in range(math.floor(n(G)/2), 1, -1):
-        for M in combinations (E(G), k):
-            if is_matching(list(M)) == True:
-              return False
+def is_matching (G,M):
+    for edge1 in M:
+        v, w = edge1
+        for edge2 in M:
+            if edge2!=edge1:
+                if v in edge1 or w in edge1:
+                    return False
     return True
-    
