@@ -27,11 +27,11 @@ def is_dominationing_set(G, S):
             return False
     return True
 
-def is_matching (G,M):
+def is_matching(G,M):
     for edge1 in M:
-        v, w = edge1
+        v,w = edge1
         for edge2 in M:
-            if edge2!=edge1:
-                if v in edge1 or w in edge1:
+            if edge2 != edge1:
+                if v in edge2 or w in edge2:
                     return False
-    return True
+    return True 
