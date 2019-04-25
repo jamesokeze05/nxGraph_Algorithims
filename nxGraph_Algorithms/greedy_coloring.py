@@ -9,7 +9,7 @@ def greedy_coloring(G):
         if colors[v] != None:
             N=neighbors(G, v)
             bad_colors = [colors[w] for w in N]
-            j=1
+            j = 1
             
             while colors[v] == None:
                if j not in bad_colors:
