@@ -7,7 +7,7 @@ def Havel_Hakimi_Derivative(D):
         D[i] -= 1
         D.pop(0)
         D.sort(reverse = True)
-    return None
+    return D
 
 def Havel_Hakimi_Process(D):
     while D[0] > 0:
@@ -22,6 +22,6 @@ def residue(G):
     Havel_Hakimi_Process(D)
     return len(D)
 
-G = nx.erdos_renyi_graph(7,.3)
+G = nx.read_edgelist('Test_Graphs/G1.txt')
 nx.draw_networkx(G)
 print(Havel_Hakimi_Derivative(G))
