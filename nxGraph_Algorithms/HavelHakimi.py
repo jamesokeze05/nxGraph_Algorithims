@@ -17,7 +17,7 @@ def is_Graphic(D):
     Havel_Hakimi_Process(D)
     return sum(D) == 0
 
-def residue(G):
+def is_residue(G):
     D = degree_sequence(G)
     Havel_Hakimi_Process(D)
     return len(D)
