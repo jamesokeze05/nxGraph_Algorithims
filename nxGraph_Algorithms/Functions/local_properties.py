@@ -10,6 +10,6 @@ def eccentricity(G, v):
     return len(distance_list(G, v))-1 
 
 def degree_sequence(G):
-    D=[vertex_degree(G, v) for v in V(G)]
+    D = [vertex_degree(G, v) for v in V(G)]
     D.sort(reverse = True)
     return D
