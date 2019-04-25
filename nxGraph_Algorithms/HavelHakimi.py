@@ -1,13 +1,12 @@
 import networkx as nx
-from Functions.global_properties import *
+from Functions.global_properties import degree_sequence
 
 
 def Havel_Hakimi_Derivative(D):
     for i in range(1, D[0] +1):
         D[i] -= 1
-        
-    D.pop(0)
-    D.sort(reverse = True)
+        D.pop(0)
+        D.sort(reverse = True)
     return None
 
 def Havel_Hakimi_Process(D):
@@ -22,3 +21,7 @@ def residue(G):
     D = degree_sequence(G)
     Havel_Hakimi_Process(D)
     return len(D)
+
+G = nx.erdos_renyi_graph(7,.3)
+nx.draw_networkx(G)
+print(Havel_Hakimi_Derivative(G))
