@@ -1,7 +1,7 @@
 from itertools import combinations 
 from Functions.bool_function import is_independent
 from Functions.global_properties import V,n
-import networkx as nx
+
 
 def maximum_independent_set(G):
     for k in range(n(G), 1, -1):
