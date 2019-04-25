@@ -6,7 +6,7 @@ def greedy_coloring(G):
     colors = {c: None for v in V(G)}
     colors ([V(G)][0])=1
     for v in V(G):
-        if colors[v] != None:
+        if colors[v] == None:
             N=neighbors(G, v)
             bad_colors = [colors[w] for w in N]
             j = 1
