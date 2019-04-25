@@ -14,5 +14,5 @@ def greedy_coloring(G):
                 if j not in bad_colors:
                     colors[v] = j
                 else:
-                    j+= 1
+                    j += 1
     return colors
