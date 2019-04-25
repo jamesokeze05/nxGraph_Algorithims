@@ -1,11 +1,13 @@
 import networkx as nx
-from Functions.global_properties import *
-from Functions.local_properties import *
+from Functions.bool_functions import is_clique
+from Functions.global_properties import V , n
+from itertools import combinations
 
-def is_clique(G, s):
-    for i in range(len(s)):
-        N=neighbors(G, s[i])
-        for j in range(i +1, len(s)):
-            if s[i + 1] not in N:
-                return False
-    return True
+def maximum_clique(G):
+    for k in range(n(G), 1, -1):
+        for S in combinations(V(G), k):
+            if is_clique(G, list(S)) == True:
+                return list(S)
+            
+def clique_numbers(G):
+    return len(maximum_clique(G))
