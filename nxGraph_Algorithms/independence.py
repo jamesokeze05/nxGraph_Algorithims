@@ -12,7 +12,3 @@ def maximum_independent_set(G):
 def independence_number(G):
     return len(maximum_independent_set(G))
 
-D = nx.erdos_renyi_graph(7,.3)
-nx.draw_networkx(D)
-print(independence_number(D))
-
