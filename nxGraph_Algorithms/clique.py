@@ -12,5 +12,3 @@ def maximum_clique(G):
 def clique_numbers(G):
     return len(maximum_clique(G))
 
-G = nx.erdos_renyi_graph(7,.3)
-print(maximum_clique(G))
