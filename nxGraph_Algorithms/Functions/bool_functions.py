@@ -19,7 +19,7 @@ def is_clique(G, s):
                 return False
     return True
 
-def is_dominating_set(G, S):
+def is_dominating(G, S):
     S_complement = list(set(V(G)) - set(S))
     for v in S_complement:
         N = neighbors(G, V)
