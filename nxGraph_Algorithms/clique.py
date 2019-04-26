@@ -1,5 +1,5 @@
 import networkx as nx
-from Functions.bool_functions import is_clique
+from Functions.bool_function import is_clique
 from Functions.global_properties import V , n
 from itertools import combinations
 
@@ -11,3 +11,6 @@ def maximum_clique(G):
             
 def clique_numbers(G):
     return len(maximum_clique(G))
+
+G = nx.erdos_renyi_graph(7,.3)
+print(maximum_clique(G))
