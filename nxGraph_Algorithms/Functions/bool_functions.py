@@ -1,7 +1,7 @@
 import networkx as nx
 from Functions.local_properties import *
 from Functions.global_properties import *
-
+import matplotlib.pyplot as plt
 
 def is_independent(G, S):
     for v in S:
@@ -52,17 +52,11 @@ def V(G):
 def E(G):
     return list(nx.edges(G))
 
-
-    
-
 g = nx.read_edgelist('sampleG.txt', nodetype=str,
   data=(('weight',int),), create_using=nx.Graph())
 
 t = nx.Graph()
 t.add_node('a')
-
-
-      
 
 def incident_edges(g,t):
     l = nx.Graph()
@@ -100,7 +94,6 @@ def incident_edges(g,t):
 def min_incident_edges(g,t):
     return min(incident_edges(g,t))
 
-
 print(min_incident_edges(g,t))
 
 #removes the edge from priority q and adds it to MST t
@@ -121,7 +114,6 @@ def cost(g,e):
 #print('this prints the min weighted edge to vertex', min_incident_edges(g,t))
 #print()
 
-
 #gets the verteces of the minimum incident edge of current vertex and 
 #adds the vertex currently not in MST t to the MST t
 def min_incident_node(g,t):
@@ -138,10 +130,6 @@ def min_incident_node(g,t):
         
 #print('get the current vertex:',min_incident_node(g,t))
 #print(t.edges())
-
-
-import networkx as nx
-import matplotlib.pyplot as plt 
 
 g = nx.read_edgelist('weightedgraph.txt', nodetype=str,
   data=(('weight',int),), create_using=nx.Graph())
