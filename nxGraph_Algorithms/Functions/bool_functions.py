@@ -146,9 +146,7 @@ import matplotlib.pyplot as plt
 g = nx.read_edgelist('weightedgraph.txt', nodetype=str,
   data=(('weight',int),), create_using=nx.Graph())
 
-
 print(g.edges(data=True))
-
 def prims(g,starting_vertex):
     t = nx.Graph() #empty graph t to store vertices removed from proirity queue g
     t.add_node(starting_vertex)#stores vertex in MST t
